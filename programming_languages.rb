@@ -6,7 +6,8 @@ def reformat_languages(languages)
       if language_hash.has_key?(:language)
         language_hash[language][:language_style] << language_style
       else
-        language_hash[language] = {type: language_type[:type], style: [language_style]}
+        language_hash[:language] = {type: language_type}
+        language_hash[:language] = 
       end
     end
   end
